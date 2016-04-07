@@ -5,7 +5,8 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/spinda/diagrams-wx.svg)](https://codeclimate.com/github/spinda/diagrams-wx)
 [![Hackage-Deps](https://img.shields.io/hackage-deps/v/diagrams-wx.svg)](http://packdeps.haskellers.com/feed?needle=diagrams-wx)
 
-A rendering backend for drawing diagrams in wxWidgets (using
+A rendering backend for drawing
+[diagrams](http://projects.haskell.org/diagrams/) in wxWidgets (using
 [wxHaskell](https://wiki.haskell.org/WxHaskell)), built on top of the
 [diagrams-cairo](https://github.com/diagrams/diagrams-cairo) backend.
 
