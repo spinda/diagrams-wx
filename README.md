@@ -63,5 +63,5 @@ launched with `cabal run diagrams-wx-demo` or `stack exec diagrams-wx-demo`.
 
 Copyright (C) 2016 Michael Smith.
 
-diagrams-wx is licensed under the [BSD 3-clause license](/LICENSE).
+`diagrams-wx` is licensed under the [BSD 3-clause license](/LICENSE).
 
