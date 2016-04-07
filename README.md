@@ -10,6 +10,8 @@ A rendering backend for drawing
 [wxHaskell](https://wiki.haskell.org/WxHaskell)), built on top of the
 [diagrams-cairo](https://github.com/diagrams/diagrams-cairo) backend.
 
+![Demo Screenshot](https://i.imgur.com/HCy7cIe.png)
+
 ## Documentation
 
 See the Haddock page for the
