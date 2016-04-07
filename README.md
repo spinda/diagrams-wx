@@ -58,8 +58,18 @@ usual way, via `cabal build` or `stack build` depending on your setup.
 
 ## Demo
 
-A simple demo is available in the `demo/` directory. After building, it can be
-launched with `cabal run diagrams-wx-demo` or `stack exec diagrams-wx-demo`.
+A simple demo is available in the `demo/` directory. It can be built and run as
+follows:
+
+```
+# for Cabal
+cabal configure -fbuildExample
+cabal build
+cabal run diagrams-wx-demo
+# for stack
+stack build --flag diagrams-wx:buildExample
+stack exec diagrams-wx-demo
+```
 
 ## Legal
 

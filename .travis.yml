@@ -80,7 +80,7 @@ install:
       stack install happy
       stack install alex
       stack install gtk2hs-buildtools
-      stack --no-terminal --install-ghc $ARGS build --only-dependencies
+      stack --no-terminal --install-ghc $ARGS build --flag diagrams-wx:buildExample --only-dependencies
       ;;
     cabal)
       cabal --version
@@ -96,10 +96,10 @@ script:
 - |
   case "$BUILD" in
     stack)
-      stack --no-terminal $ARGS build --haddock --no-haddock-deps
+      stack --no-terminal $ARGS build --flag diagrams-wx:buildExample --haddock --no-haddock-deps
       ;;
     cabal)
-      cabal configure -v2 --ghc-options="-O0 -Werror"
+      cabal configure -v2 -fbuildExample --ghc-options="-O0 -Werror"
       cabal build
       cabal check || [ "$CABALVER" == "1.16" ]
       cabal sdist
