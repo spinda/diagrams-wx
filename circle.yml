@@ -8,6 +8,7 @@ dependencies:
     - sudo apt-get install -y stack
   override:
     - stack setup
-    - stack build
+    - stack build --dependencies-only --test
 test:
-  override: []
+  override:
+    - stack build --test --no-run-tests
