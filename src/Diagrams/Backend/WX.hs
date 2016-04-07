@@ -123,9 +123,9 @@ finalSize size = unr2 . fmap ceiling . fst . sizeAdjustment size . boundingBox
 
 -- | Exception indicating that the target image was the wrong size (too small)
 -- for the rendered diagram size.
-data ImageSizeException =
-  ImageSizeException !(Int, Int) -- ^ rendered diagram size
-                     !(Int, Int) -- ^ target image size
+data ImageSizeException
+  -- | @ImageSizeException renderedDiagramSize targetImageSize@
+  = ImageSizeException !(Int, Int) !(Int, Int)
   deriving (Show, Typeable)
 
 instance Exception ImageSizeException where
