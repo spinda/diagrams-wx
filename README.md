@@ -15,7 +15,7 @@ A rendering backend for drawing
 ## Documentation
 
 See the Haddock page for the
-[Diagrams.Backend.WX](https://hackage.haskell.org/package/diagrams-wx-0.1.0.0/docs/Diagrams-Backend-WX.html)
+[Diagrams.Backend.WX](https://hackage.haskell.org/package/diagrams-wx-0.1.1.0/docs/Diagrams-Backend-WX.html)
 module.
 
 ## Building
