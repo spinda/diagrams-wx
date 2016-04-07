@@ -1,7 +1,7 @@
 # diagrams-wx
 
 [![Hackage](https://img.shields.io/hackage/v/diagrams-wx.svg)](https://hackage.haskell.org/package/diagrams-wx)
-[![Build Status](https://img.shields.io/circleci/project/spinda/diagrams-wx/master.svg)](https://circleci.com/gh/spinda/diagrams-wx)
+[![Build Status](https://img.shields.io/travis/spinda/diagrams-wx/master.svg)](https://travis-ci.org/spinda/diagrams-wx)
 [![Code Climate](https://img.shields.io/codeclimate/github/spinda/diagrams-wx.svg)](https://codeclimate.com/github/spinda/diagrams-wx)
 [![Hackage-Deps](https://img.shields.io/hackage-deps/v/diagrams-wx.svg)](http://packdeps.haskellers.com/feed?needle=diagrams-wx)
 
