@@ -21,7 +21,7 @@ paintDiagram dc rect = drawDiagram dc sampleDiagram pt rs W.white []
     rs = dims2D (fromIntegral $ rectWidth rect) (fromIntegral $ rectHeight rect)
 
 sampleDiagram :: QDiagram Cairo V2 Double Any
-sampleDiagram = mconcat $
+sampleDiagram = mconcat
   [ circle 0.1 # fc D.green
   , triangle 1 # scale 0.4 # fc D.yellow
   , square 1   # fc D.blue
