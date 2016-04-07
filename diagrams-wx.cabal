@@ -26,8 +26,7 @@ library
   default-language:    Haskell2010
   c-sources:           lib/util.c
 
-test-suite diagrams-wx-demo
-  type:                exitcode-stdio-1.0
+executable diagrams-wx-demo
   hs-source-dirs:      demo
   main-is:             Demo.hs
   build-depends:       base
