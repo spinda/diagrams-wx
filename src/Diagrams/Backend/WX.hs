@@ -1,5 +1,13 @@
 {-# LANGUAGE ForeignFunctionInterface #-}
 
+-- | An optional add-on to the
+-- <https://hackage.haskell.org/package/diagrams-cairo diagrams-cairo>
+-- package which allows rendering diagrams in wxWidgets (using
+-- <https://wiki.haskell.org/WxHaskell wxHaskell>).
+--
+-- wxHaskell doesn't support transparency when drawing 'Image's, so each
+-- of these functions takes a 'W.Color' to use as the background color
+-- when rendering the 'QDiagram'.
 module Diagrams.Backend.WX (
     -- * Drawing to DC
     drawDiagram
@@ -7,7 +15,7 @@ module Diagrams.Backend.WX (
   , withDiagramImage
   , renderDiagramToNewImage
   , renderDiagramToImage
-  , ImageSizeException
+  , ImageSizeException(..)
   ) where
 
 import Control.Exception
@@ -36,12 +44,12 @@ import Foreign.C.Types
 -- Drawing to DC ---------------------------------------------------------------
 --------------------------------------------------------------------------------
 
--- | Simple interface for a diagram to a 'DC', like 'drawImage'.
+-- | Simple interface for drawing a diagram to a 'DC', like 'drawImage'.
 --
--- Note that, internally, this creates, renders to, draws, and then deletes a
--- new 'Image' instance every frame. Particularly performance-sensitive users
--- may want to look at using 'renderDiagramToImage' with the same 'Image'
--- instance every frame.
+-- Note that this creates, renders to, draws, and then deletes a
+-- new 'Image' instance every invocation. Particularly performance-sensitive
+-- users may want to look at using 'renderDiagramToImage' with the same 'Image'
+-- instance every repaint.
 drawDiagram :: (Monoid b, Semigroup b)
             => DC a
             -> QDiagram Cairo V2 Double b -> W.Point -> SizeSpec V2 Double
@@ -70,7 +78,7 @@ withDiagramImage diagram size bgColor =
 --
 -- Make sure 'imageDelete' is called to free the 'Image' instance! Using
 -- 'bracket' is recommended to ensure that the 'Image' is still freed in the
--- case of an exception.
+-- case of an exception:
 --
 -- > bracket (renderDiagramToNewImage diagram size) imageDelete doStuffWithImage
 --
