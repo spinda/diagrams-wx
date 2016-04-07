@@ -27,23 +27,29 @@ the following:
 
 1. Install required external libraries:
 
-     sudo apt-get install libwxgtk3.0-dev libwxgtk-media3.0-dev libcairo2-dev libpango1.0-dev
+   ```
+   sudo apt-get install libwxgtk3.0-dev libwxgtk-media3.0-dev libcairo2-dev libpango1.0-dev
+   ```
 
 2. Ensure `happy` and `alex` are installed:
 
-     # for Cabal
-     cabal install happy
-     cabal install alex
-     # for stack
-     stack install happy
-     stack install alex
+   ```
+   # for Cabal
+   cabal install happy
+   cabal install alex
+   # for stack
+   stack install happy
+   stack install alex
+   ```
 
 3. Ensure `gtk2hs-buildtools` is installed:
 
-     # for Cabal
-     cabal install gtk2hs-buildtools
-     # for stack
-     stack install gtk2hs-buildtools
+   ```
+   # for Cabal
+   cabal install gtk2hs-buildtools
+   # for stack
+   stack install gtk2hs-buildtools
+   ```
 
 Once all dependencies are set up, the `diagrams-wx` package can be built in the
 usual way, via `cabal build` or `stack build` depending on your setup.
